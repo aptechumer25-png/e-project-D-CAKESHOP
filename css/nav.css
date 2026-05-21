@@ -1,0 +1,133 @@
+/* =========================
+   MAIN NAVBAR
+========================= */
+.main-nav {
+    background: #ff6680;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* NAV LINKS */
+.main-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 16px !important;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.main-nav .nav-link:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* CART ICON */
+#cart-icon {
+    transition: transform 0.2s ease;
+}
+
+#cart-icon:hover {
+    transform: scale(1.1);
+}
+
+#cart-icon i {
+    font-size: 20px;
+}
+
+/* =========================
+   DROPDOWN (CLEAN FIX)
+========================= */
+.product-dropdown {
+    position: relative;
+}
+
+/* Desktop hover dropdown */
+@media (min-width: 992px) {
+    .product-dropdown .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: 0.25s ease;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        padding: 8px;
+    }
+
+    .product-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile dropdown (Bootstrap handles click) */
+@media (max-width: 991px) {
+    .product-dropdown .dropdown-menu {
+        position: static !important;
+        float: none !important;
+        box-shadow: none !important;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .product-dropdown .dropdown-menu.show {
+        display: block;
+        padding: 8px;
+    }
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu {
+    background: #ff6680;
+    border: none;
+}
+
+.dropdown-item {
+    color: rgba(255,255,255,0.9);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+.navbar-toggler {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px !important;
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+@media (max-width: 991px) {
+    .navbar-nav {
+        gap: 0 !important;
+    }
+}#cart-icon, .main-nav a {
+    transition: 0.2s ease;
+}
+
+#cart-icon:hover,
+.main-nav a:hover {
+    transform: scale(1.1);
+}
